@@ -1,4 +1,5 @@
 import express from "express"
+import cookieParser from "cookie-parser" 
 import { connectDB } from "./db/index.js"
 import { upload } from "./middlewares/multer.middleware.js"
 
@@ -12,6 +13,7 @@ connectDB()
 })
 
 app.use(express.json())
+app.use(cookieParser())
 
 // Routes Import 
 
